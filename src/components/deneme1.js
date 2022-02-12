@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 function Deneme1() {
@@ -6,11 +7,18 @@ function Deneme1() {
   const [isLoading, setIsLoading] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((jsondata) => setFakeUsers(jsondata))
-      .finally(() => setIsLoading(false));
+    axios("https://jsonplaceholder.typicode.com/users")
+      .then((data) => setFakeUsers(data.data))
+      .catch((e) => console.log(e))
+      .finally(() => setIsLoading(false))
   }, []);
+
+  //   useEffect(() => {
+  //     fetch("https://jsonplaceholder.typicode.com/users")
+  //       .then((response) => response.json())
+  //       .then((jsondata) => setFakeUsers(jsondata))
+  //       .finally(() => setIsLoading(false));
+  //   }, []);
 
   return (
     <div>
