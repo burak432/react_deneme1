@@ -7,5 +7,5 @@
 
 [![demo][1]][2]
 
-[1]:  https://github.com/burak432/react_deneme1/blob/master/src/components/deneme1.js
+[1]:  https://github.com/burak432/react_deneme1/blob/master/src/components/contacts.jpg
 [2]:  https://burak432.github.io/react_deneme1/ "Redirect to demo"
